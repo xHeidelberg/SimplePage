@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: Besley, serif;
+}
+
+.header {
+    background: blur(55px) transparent;
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 10px;
+}
+
+.profile-image {
+    background: #000080;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, .5);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+}
+
+.profile-image i {
+    color: white;
+    font-size: 24px;
+    line-height: 48px;
+    /* Center the icon vertically */
+    text-align: center;
+    /* Center the icon horizontally */
+}
+
+.logo {
+    font-family: "Bungee Tint", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 75px;
+
+}
+
+button {
+    border: none;
+    border-radius: 55px;
+    background: rebeccapurple;
+    color: white;
+    padding: 18px 24px;
+}
+
+a {
+    text-decoration: none;
+    color: #a77c52;
+    font-size: 23px;
+
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    padding-left: 45px;
+    gap: 16px;
+}
+
+#clock {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+/* */
+
+.content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+}
+
+.image-container img {
+    width: 45%;
+
+}
+
+.img-cont h1 {
+
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "MORF" 15,
+        "SHLN" 50;
+    font-size: 85px;
+    margin-top: 20vh;
+    margin-left: -20vh;
+}
+
+.img-cont p {
+    margin: 8vh;
+    font-size: 25px;
+    text-align: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+footer {
+    margin-top: 15em;
+    padding: 15vh;
+    text-align: center;
+    background-color: black;
+}
+footer p {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    margin: 0 55px;
+    font-family: sans-serif;
+}
+
+.ico {
+    margin-top: 10vh;
+    text-align: center;
+}
+.ico a {
+    font-size: 30px;
+    padding: 0 15px;
+    color: white;
+    transition: 1s;
+}
+.ico a:hover {
+    font-size: 35px;
+}
