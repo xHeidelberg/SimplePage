@@ -1,3 +1,3 @@
 # SimplePage
-[!IMPORTANT]
+[IMPORTANT]
 Hello
