@@ -2,57 +2,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
 
-
+/* --- Base Styles & Resets --- */
 body {
     margin: 0;
-    font-family: Besley, serif;
+    font-family: 'Rubik', sans-serif; 
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
 }
 
+/* --- Header --- */
 .header {
-    background: blur(55px) transparent;
+    background: rgba(255, 255, 255, 0.7); 
+    backdrop-filter: blur(5px); 
     display: flex;
     justify-content: space-between;
-    padding: 13px 10px;
+    align-items: center;
+    padding: 1rem; /* Use rem for consistent spacing */
+    flex-wrap: wrap; 
 }
 
 .profile-image {
     background: #000080;
     box-shadow: inset 2px 2px 4px rgba(0, 0, 0, .5);
     border-radius: 50%;
-    width: 48px;
-    height: 48px;
+    width: 3rem; 
+    height: 3rem; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
 }
 
 .profile-image i {
     color: white;
-    font-size: 24px;
-    line-height: 48px;
-    /* Center the icon vertically */
-    text-align: center;
-    /* Center the icon horizontally */
+    font-size: 1.5rem;
 }
 
 .logo {
     font-family: "Bungee Tint", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 75px;
-
+    font-size: 3rem;
+    text-align: center;
+    margin: 0.5rem 0;
 }
 
-button {
-    border: none;
-    border-radius: 55px;
-    background: rebeccapurple;
-    color: white;
-    padding: 18px 24px;
-}
+/* --- Navigation --- */
+
 
 a {
     text-decoration: none;
     color: #a77c52;
-    font-size: 23px;
+    font-size: 1.1rem; 
+    transition: color 0.3s ease;
+}
 
+a:hover {
+    color: #8c6a46; 
 }
 
 ul {
@@ -60,42 +66,52 @@ ul {
     display: flex;
     margin: 0;
     padding: 0;
-    gap: 16px;
+    gap: 1rem; 
+    flex-wrap: wrap;
+    justify-content: center; 
 }
 
 .left {
     display: flex;
     align-items: center;
-    padding-left: 45px;
-    gap: 16px;
+    padding-left: 1rem;
+    gap: 1rem; 
+    flex-wrap: wrap;
+    justify-content: center; 
 }
 
 #clock {
-    font-size: 25px;
+    font-size: 1.2rem;
     font-weight: bold;
-    padding: 20px;
+    padding: 0.5rem;
     font-family: sans-serif;
+    white-space: nowrap; 
 }
 
-/* */
-
+/* --- Main Content --- */
 .content {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column; 
+    align-items: center;
+    padding: 1rem; 
 }
 
 .image-container {
-    flex: 1;
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem; 
 }
 
 .image-container img {
-    width: 45%;
-
+    width: 90%; 
+    max-width: 500px; 
+    height: auto; 
+    margin-bottom: 1rem; 
 }
 
 .img-cont h1 {
-
     font-family: "Honk", system-ui;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -103,41 +119,152 @@ ul {
     font-variation-settings:
         "MORF" 15,
         "SHLN" 50;
-    font-size: 85px;
-    margin-top: 20vh;
-    margin-left: -20vh;
+    font-size: 3rem;
+    margin-top: 5vh;
+    margin-left: 0; 
+    text-align: center;
 }
 
 .img-cont p {
-    margin: 8vh;
-    font-size: 25px;
+    margin: 2rem;
+    font-size: 1.1rem;
     text-align: center;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+/* --- Footer --- */
 footer {
-    margin-top: 15em;
-    padding: 15vh;
+    margin-top: 5em; 
+    padding: 5vh 1rem; 
     text-align: center;
     background-color: black;
 }
+
 footer p {
     color: rgb(255, 255, 255);
-    font-size: 15px;
-    margin: 0 55px;
+    font-size: 0.9rem;
+    margin: 0 1rem; 
     font-family: sans-serif;
 }
 
 .ico {
-    margin-top: 10vh;
+    margin-top: 3vh; 
     text-align: center;
 }
+
 .ico a {
-    font-size: 30px;
-    padding: 0 15px;
+    font-size: 1.5rem; 
+    padding: 0 0.8rem; 
     color: white;
-    transition: 1s;
+    transition: transform 0.3s ease; 
 }
+
 .ico a:hover {
-    font-size: 35px;
+    transform: scale(1.1); 
+}
+
+/* --- Media Queries for Larger Screens --- */
+@media (min-width: 768px) {
+    .header {
+        padding: 1rem 2rem;
+    }
+
+    .logo {
+        font-size: 4.5rem;
+    }
+
+    .left {
+        padding-left: 2rem;
+    }
+
+    #clock {
+        font-size: 1.5rem;
+    }
+
+    .content {
+        flex-direction: row; 
+        align-items: flex-start;
+    }
+
+    .image-container {
+        flex: 1; 
+        flex-direction: row;
+        justify-content: center; 
+    }
+
+    .image-container img {
+        width: 45%; 
+        max-width: none;
+    }
+
+    .img-cont {
+        flex: 1;
+    }
+
+    .img-cont h1 {
+        font-size: 5rem;
+        margin-top: 20vh; 
+        margin-left: -20vh;
+        text-align: left;
+    }
+
+    .img-cont p {
+        margin: 8vh;
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    footer {
+        margin-top: 15em;
+        padding: 15vh;
+    }
+
+    footer p {
+        margin: 0 55px;
+        font-size: 1rem;
+    }
+
+    .ico {
+        margin-top: 10vh;
+    }
+
+    .ico a {
+        font-size: 1.8rem;
+    }
+
+    .ico a:hover {
+        font-size: 2.2rem;
+        transform: none; 
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-image {
+        margin-bottom: 0.5rem;
+    }
+
+    .left {
+        padding-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    ul {
+        flex-direction: column; 
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 2.5rem; 
+    }
+
+    button {
+        width: 100%; 
+        margin-top: 1rem;
+    }
 }
